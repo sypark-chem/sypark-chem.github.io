@@ -1,0 +1,43 @@
+<footer class="site-footer h-card" style="background-color: #222; color: white;">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-heading" style="overflow: auto;">
+      <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
+        <img src="/assets/img/name.png" height="60">
+      </a>
+    </div>
+
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name" style="font-size:90%">
+            {%- if site.author -%}
+              {{ site.author | escape }}
+            {%- else -%}
+              {{ site.data.l10n.title | escape }}
+            {%- endif -%}
+            {%- if site.email -%}
+            <li style="font-size:90%">{{ site.email }}</li>
+            {%- endif -%}
+        </ul>
+        <div style="font-size:90%">{%- include social.html -%}</div>
+        <div class="lang-switcher">
+          {%- include lang-switcher.html -%}
+        </div>
+      </div>
+
+      <div class="footer-col footer-col-2">
+         
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p style="font-size:90%; text-align: right;">{{- site.data.l10n.description | escape -}}</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>

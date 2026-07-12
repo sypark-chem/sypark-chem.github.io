@@ -1,0 +1,72 @@
+---
+layout: post
+title: About me
+permalink: /about
+lang: en
+---
+
+{% capture markdown_content %}
+{% include more-about-me.md %}
+{% endcapture %}
+
+
+Last updated: 2025-11-11
+
+<html>
+<head>
+    <title>More about me</title>
+<body style="overflow-x: hidden;">
+    <div class="container">
+        <div class="image-container">
+            <img src="assets/img/me.png" alt="Shinyoung Park">
+        </div>
+        <div class="right-text-container">
+            <p>
+                {% include section_extractor.html section_name="introduction" markdown_content=markdown_content %}
+            </p>
+        </div>
+    </div>
+    <div class="gray-container">
+        <div class="wrapper">
+            <p>
+                {% include section_extractor.html section_name="education" markdown_content=markdown_content %}
+            </p>
+        </div>
+    </div>
+    <div class="normal-container">
+        <p>
+            {% include section_extractor.html section_name="research" markdown_content=markdown_content %}
+        </p>
+    </div>
+    <div class="gray-container">
+        <div class="wrapper">
+            <p>
+                {% include section_extractor.html section_name="awards" markdown_content=markdown_content %}
+            </p>
+        </div>
+    </div>
+    <div class="normal-container">
+        <p>
+            {% include section_extractor.html section_name="skills" markdown_content=markdown_content %}
+        </p>
+    </div>
+    <div class="gray-container">
+        <div class="wrapper">
+            <p>
+                {% include section_extractor.html section_name="service" markdown_content=markdown_content %}
+            </p>
+        </div>
+    </div>
+    <div class="normal-container">
+        <p>
+            {% include section_extractor.html section_name="publications" markdown_content=markdown_content %}
+        </p>
+    </div>
+    <div class="image-link-container">
+        <img src="assets/img/gallery/periodic_table_front.png" alt="Gallery">
+        <a href="{{ '/gallery' | relative_url }}" target="">
+        <span>Gallery</span>
+        </a>
+    </div>
+</body>
+</html>
