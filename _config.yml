@@ -47,7 +47,7 @@ parallel_localization: false
 sass:
     sourcemap: never
 
-# google_analytics:
+google_analytics: G-SVXZ7N3VZF
 
 # plugins:
 #   - jekyll-sitemap
